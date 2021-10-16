@@ -10,18 +10,12 @@
 	<div class="mdui-typo">
       <h4 class="doc-article-title">
 	    填入<code>client_id</code>和<code>client_secret</code>,
-      	<a href="<?php echo $app_url;?>" target="_blank" class="mdui-btn mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">&#xe89e;</i> 获取应用ID和机密(分两个页面显示，请注意保存)</a>
+      	<a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank" class="mdui-btn mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">&#xe89e;</i> 在azure管理页面中获取ID和key</a>
       </h4>
+      <h3></h3>
     </div>
 
 	<form action="" method="post">
-		<div class="mdui-textfield mdui-textfield-floating-label">
-			<i class="mdui-icon material-icons">https</i>
-			<label class="mdui-textfield-label">应用机密(client secret)</label>
-			<input type="text" type="text" class="mdui-textfield-input" name="client_secret" required value="<?php echo config('client_secret');?>"/>
-			<div class="mdui-textfield-error">应用机密不能为空</div>
-		</div>
-		<br>
 		<div class="mdui-textfield mdui-textfield-floating-label">
 		  	<i class="mdui-icon material-icons">&#xe5c3;</i>
 		  	<label class="mdui-textfield-label">应用 ID(client_id)</label>
@@ -29,11 +23,18 @@
 		  	<div class="mdui-textfield-error">应用 ID不能为空</div>
 		</div>
 		<br>
+		<div class="mdui-textfield mdui-textfield-floating-label">
+			<i class="mdui-icon material-icons">https</i>
+			<label class="mdui-textfield-label">应用机密(client secret)</label>
+			<input type="text" type="text" class="mdui-textfield-input" name="client_secret" required value="<?php echo config('client_secret');?>"/>
+			<div class="mdui-textfield-error">应用机密不能为空</div>
+		</div>
+		<br>
 
 		<div class="mdui-textfield mdui-textfield-floating-label">
 		   <i class="mdui-icon material-icons">&#xe41a;</i>
-		   <?php if($redirect_uri == 'https://ju.tn/'):?>
-		   <label class="mdui-textfield-label">由于你的网站不是<b>http://localhost/</b>。将通过ju.tn进行中转</label>
+		   <?php if($redirect_uri == 'https://oneindex.dtnetwork.top'):?>
+		   <label class="mdui-textfield-label">由于你的网站不是<b>http://localhost/</b>。将通过oneindex.dtnetwork.top进行中转</label>
 		   <?php endif;?>
 		   <label class="mdui-textfield-label"><?php echo $redirect_uri;?></label>
 		   <input type="text" class="mdui-textfield-input" disabled  value="<?php echo $redirect_uri;?>"/>

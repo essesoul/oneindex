@@ -182,13 +182,11 @@ class AdminController{
 		if($_SERVER['HTTP_HOST'] == 'localhost'){
 			$redirect_uri = 'http://'.$_SERVER['HTTP_HOST'].get_absolute_path(dirname($_SERVER['PHP_SELF']));
 		}else{
-			// 非https,调用ju.tn中转
-			$redirect_uri = 'https://oneindex.github.io/';
+			// 非https,调用中转
+			$redirect_uri = 'https://oneindex.dtnetwork.top/';
 		}
 		
-		$ru = "https://developer.microsoft.com/en-us/graph/quick-start?appID=_appId_&appName=_appName_&redirectUrl={$redirect_uri}&platform=option-php";
-		$deepLink = "/quickstart/graphIO?publicClientSupport=false&appName=oneindex&redirectUrl={$redirect_uri}&allowImplicitFlow=false&ru=".urlencode($ru);
-		$app_url = "https://apps.dev.microsoft.com/?deepLink=".urlencode($deepLink);
+		$app_url = "https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps";
 		return view::load('install/install_1')->with('title','系统安装')
 						->with('redirect_uri', $redirect_uri)
 						->with('app_url', $app_url);

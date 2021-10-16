@@ -7,7 +7,7 @@ Onedrive Directory Index
 直接列出 OneDrive 目录，文件直链下载。  
 
 ## Demo
-[https://xn.tn](https://xn.tn)  
+[https://drive.dtnetwork.top/](https://drive.dtnetwork.top/)  
 
 ## 安装运行
 

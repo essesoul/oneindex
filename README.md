@@ -21,7 +21,21 @@ Onedrive Directory Index
 ## 配置：
 <img width="658" alt="image" src="/media/files/install.gif">  
 
-### 计划任务  
+## 伪静态设置
+
+```
+if (!-f $request_filename){
+set $rule_0 1$rule_0;
+}
+if (!-d $request_filename){
+set $rule_0 2$rule_0;
+}
+if ($rule_0 = "21"){
+rewrite ^/(.*)$ /index.php?/$1 last;
+}
+```
+
+## 计划任务  
 [可选]**推荐配置**，非必需。后台定时刷新缓存，可增加前台访问的速度。  
 ```
 # 每小时刷新一次token

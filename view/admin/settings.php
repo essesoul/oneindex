@@ -70,6 +70,18 @@
 			  <input type="checkbox" name="root_path" value="?" <?php echo empty($config['root_path'])?'checked':'';?>/>
 			  <i class="mdui-switch-icon"></i>
 		  </label>
+		  <p><h3>伪静态示例</h3></p>
+		  <textarea style="width:300px;height:100px;">
+if (!-f $request_filename){
+set $rule_0 1$rule_0;
+}
+if (!-d $request_filename){
+set $rule_0 2$rule_0;
+}
+if ($rule_0 = "21"){
+rewrite ^/(.*)$ /index.php?/$1 last;
+}
+          </textarea>
 		</div>
 		
 

@@ -12,7 +12,7 @@
 	    填入<code>client_id</code>和<code>client_secret</code>,
       	<a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank" class="mdui-btn mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">&#xe89e;</i> 在azure管理页面中获取ID和key</a>
       </h4>
-      <h3><a herf = "https://zhuanlan.zhihu.com/p/166130337">详细获取教程</a></h3>
+      <h3><a href = "https://zhuanlan.zhihu.com/p/166130337">详细获取教程</a></h3>
     </div>
 
 	<form action="" method="post">
